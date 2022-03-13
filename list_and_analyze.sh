@@ -5,5 +5,5 @@
 export S3_LOCATION=s3://$1
 export OUTPUT_FILE=s3-list-output
 
-# ./s3_list.sh || exit 1
+./s3_list.sh || exit 1
 ./analyze.py "$OUTPUT_FILE" || exit 1
