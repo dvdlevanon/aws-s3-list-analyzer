@@ -77,7 +77,7 @@ def print_level_dirs(directory, depth, desired_level):
 		return
 	
 	if desired_level == directory.depth():
-		print('{} [size: {}] [count: {}]'.format(sizeof_fmt(directory.size), directory.count))
+		print('{} [size: {}] [count: {}]'.format(directory.path, sizeof_fmt(directory.size), directory.count))
 	
 	for child in directory.children:
 		print_level_dirs(directory.children[child], depth + 1, desired_level)
